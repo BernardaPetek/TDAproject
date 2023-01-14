@@ -46,10 +46,18 @@
 	
 	
 \section{Introduction}
-Topological data analysis (TDA) is a modern tool for data analysis which can be used in many different ways. Even though the community is generally agreed on a standard TDA pipeline, many decisions still have to be made by the analyst which can greatly affect the results and their interpretation. In this project we apply four different variations of the TDA pipeline and compare the results.
+Topological data analysis (TDA) is a modern tool for data analysis which can be used in many different ways. Even though the community is generally agreed on a standard TDA pipeline, many decisions still have to be made by the analyst which can greatly affect the results and their interpretation. In this project we applied four different variations of the TDA pipeline and compare the results.
 \section{Data and Methods}
 \subsection{Obtaining Pointclouds}
-Data was obtained from two different sources, Our World in Data and Data World Bank. For each country with at least one year of data we obtained GDP per person employed, population, refugee population, percentage of people enrolled in primary school and total number of working people.throughout the years 1960-2021. We preprocessed the data by removing the rows with missing parts of data. We also filtered the data by removing the countries which had less than 10 years worth of data.
+Data was obtained from two different sources, Our World in Data\footnote{url} and Data World Bank\footnote{url}. For each country with at least one year of data we obtained GDP per person employed, population, refugee population, percentage of people enrolled in primary school, and total number of working people throughout the years 1960-2021. We preprocessed the data by removing the rows with missing parts of data. We also filtered the data by removing the countries which had less than 10 years worth of data. 
+
+So for each country we got at least 10 years worth of data which consisted of GDP per person employed, population, refugee population, percentage of people enrolled in primary school, and total number of working people. Then we standarized the data. Finally, to get pointclouds, we partitioned the data by countries. 
+
+\subsection{Filtration and Persistent Homology}
+
+\subsection{Vectorization}
+
+
 \section{Results}
 \section{Discusion}
 	% --------------------------------------------------------------
