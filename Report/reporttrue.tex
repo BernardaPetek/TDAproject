@@ -66,6 +66,18 @@ In the next step, we extended our pipeline by vectorizing the data from the pers
 \section{Results}
 The dendrogram of the clustering made on persistence diagrams with bottleneck distance can be seen on Figure 1. Countries were put into 24 different clusters, for example ['Costa Rica', 'Kyrgyzstan', 'Nicaragua', 'Paraguay', 'Peru', 'Philippines', 'Slovenia', 'South Africa', 'Togo', 'United Kingdom', 'Uzbekistan']. The dendrogram of the clustering made on persistence diagrams with Wasserstein distance can be seen on Figure 2. Countries were put into 29 different clusters, for example ['Albania', 'Algeria', 'Argentina', 'Belarus', 'Czechia', 'Italy', 'Malaysia', 'Paraguay', 'Slovenia', 'South Korea', 'Thailand', 'United Kingdom']. The intersection of those two clusters consists of  Paraguay, Slovenia and United Kingdom, which is not a lot. However, even though those countries weren't in the same clusters, they were quite close in both dendrograms. What is more interesting
 is that some of the countries that we did not expect were clustered together, for example ['Burkina Faso', "Cote d'Ivoire", 'Luxembourg', 'Niger']. Burkina Faso, Cote d'Ivoire and Niger are all countries in West Africa and they all used to be French colonies. It is interesting that the shape of their data from the past 26 years is the same as the shape of Luxembourg's data from the past 26 years. While this may be a simple case of correlation, it may nonetheless be an interesting coincidence.
+In the figures 3-5 we can see the clustering results where the persistence diagrams were vectorized first. We can see that using the mean squared error approach, the distances were much less uniform, which some countries grouped together that have nearly identical data.
+
+\section{Conclusion}
+In the previous section, we alleged that some of the results may have revealed some insightful information about specific groups of countries (for example, french colonies being grouped together). However, the scope of our report is not large enough to conclusively make this claim. We have by no means exhausted the variety of methods used in topological data analysis - therefore further Testing is required. 
+We believe that our apporach nonetheless has validity as a potential starting point for future research.
+
+\section{Division of Work}
+Bernarda obtained, filtered, and preprocessed the data. She performed filtration, computing the persistent homology, and tested two different clustering approaches on the space of persistence diagrams.
+Jon tested three different vectorizations of the persistent diagrams, and applied clustering in the Euclidean space on the obtained vectorizations. 
+
+
+\section*{Graphs}
 
 \begin{figure}[t]
 	\centering
@@ -79,13 +91,24 @@ is that some of the countries that we did not expect were clustered together, fo
 	\caption{Dendrogram based on Wasserstein distance between persistence diagrams.}
 \end{figure}
 
-\section{Conclusion}
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=15cm]{euclidean.png}
+	\caption{Dendrogram based on Euclidean distance between vectorized persistence diagrams.}
+\end{figure}
 
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=15cm]{perimg.png}
+	\caption{Dendrogram based on Euclidean distance between flattened persistence images.}
+\end{figure}
 
-\section{Division of Work}
-Bernarda obtained, filtered, and preprocessed the data. She performed filtration, computing the persistent homology, and tested two different clustering approaches on the space of persistence diagrams.
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=15cm]{mse.png}
+	\caption{Dendrogram based on Euclidean distance between mean squared error of pixels of persistence images.}
+\end{figure}
 
-Jon tested three different vectorizations of the persistent diagrams, and applied clustering in the Euclidean space on the obtained vectorizations. 
 	% --------------------------------------------------------------
 	%     You don't have to mess with anything below this line.
 	% --------------------------------------------------------------
